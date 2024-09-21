@@ -6,9 +6,9 @@
 html {
   font-size: 62.5%;
 }
-img {
+/*img {
   width: 100%;
-}
+}*/
 .nav {
   display: flex;
   justify-content: space-around;
@@ -17,6 +17,7 @@ img {
   height: 10vh;
   background-color: #fff;
   position: fixed;
+  z-index: 5;
 }
 .nav ul {
   display: flex;
@@ -78,18 +79,16 @@ img {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  height: 80vh;
+  height: 90vh;
   background: linear-gradient(
     107.56deg,
     rgb(159, 86, 219) 0%,
     rgb(90, 76, 219) 100%
   );
+  padding-top: 5rem;
 }
-/*.note {
-  width: 50%;
-  padding-left: 8rem;
-}*/
-h1 {
+
+.note h2 {
   font-size: 4rem;
   font-weight: 500;
   line-height: 4.5rem;
@@ -103,10 +102,7 @@ h1 {
   padding-top: 2rem;
 }
 .youtube img {
-  max-width: 600px;
-}
-.youtube {
-  padding-top: 3rem;
+  max-width: 500px;
 }
 .container {
   max-width: 1200px;
@@ -114,14 +110,15 @@ h1 {
   margin: 0 auto;
 }
 .content {
-  background-color: #ffffffdd;
+  background-color: rgb(250, 250, 250);
 }
 .mid {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  padding-top: 8rem;
-  background-color: rgb(250, 250, 250);
+  padding-top: 10rem;
+  padding-bottom: 5rem;
+  /*background-color: rgb(250, 250, 250,   #ffffffdd);*/
 }
 .mid a {
   text-decoration: none;
@@ -145,15 +142,15 @@ h1 {
   font-weight: 100;
   line-height: 3rem;
   color: #151435;
-  padding-top: 1rem;
+  padding-top: 1.5rem;
 }
 .device {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  padding-top: 15rem;
+  padding-top: 10rem;
+  padding-bottom: 5rem;
   background-color: rgb(250, 250, 250);
-  height: 100vh;
 }
 
 .point h2 {
@@ -188,7 +185,8 @@ h1 {
   display: flex;
   justify-content: space-around;
   padding-top: 5rem;
-  margin: 0 auto;
+  padding-bottom: 5rem;
+  /*margin: 0 auto;*/
 }
 .pad a {
   color: #7a6ee5;
@@ -246,20 +244,15 @@ h1 {
   padding-top: 1rem;
   color: #d7d3fc;
 }
-/*
-.player {
+
+.mid-side {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  width: 100vw;
   padding-top: 8rem;
 }
-*/
+
 .player {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  padding-top: 15rem;
   background-color: rgb(250, 250, 250);
 }
 .player a {
@@ -300,9 +293,11 @@ h1 {
 
 .select {
   display: flex;
+  justify-content: space-around;
+  align-items: center;
   padding-top: 15rem;
   background-color: rgb(250, 250, 250);
-  height: 100vh;
+  padding-bottom: 5rem;
 }
 .select a {
   text-decoration: none;
@@ -314,9 +309,6 @@ h1 {
 
 .pic-3 img {
   max-width: 500px;
-}
-.pic-3 {
-  padding-top: 5rem;
 }
 
 .photo h2 {
@@ -334,8 +326,9 @@ h1 {
 }
 
 .asked {
-  height: 70vh;
   background-color: #ffffffdd;
+
+  padding-bottom: 8rem;
 }
 .asked h2 {
   text-align: center;
@@ -353,16 +346,23 @@ h1 {
   color: #7a6ee5;
 }
 .form {
-  width: 80%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
   margin-top: 5rem;
 }
 .save {
   border-bottom: 1px solid #666673;
   font-size: 2rem;
   padding: 1.5rem;
-  margin-left: 30rem;
 }
 .end {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   height: 40vh;
   background: linear-gradient(
     107.56deg,
@@ -371,11 +371,9 @@ h1 {
   );
 }
 .end h2 {
-  text-align: center;
   font-size: 4rem;
   font-weight: bold;
   color: #fff;
-  padding-top: 3rem;
 }
 .free {
   padding: 1.2rem 3rem;
@@ -384,8 +382,7 @@ h1 {
   border: 1px solid #fff;
   background-color: transparent;
   border-radius: 1rem;
-  margin-left: 60rem;
-  margin-top: 5rem;
+  margin-top: 3rem;
 }
 .mid-footer {
   display: flex;
@@ -474,15 +471,17 @@ h1 {
   }
   .caption,
   .mid,
-  .player {
+  .mid-side {
     display: flex;
+    justify-content: center;
+    align-items: center;
     column-gap: 1.5rem;
   }
   .note {
     padding-top: 5rem;
     padding-left: 1rem;
   }
-  h1 {
+  .note h1 {
     font-size: 3rem;
     font-weight: 500;
     line-height: 3rem;
@@ -491,7 +490,6 @@ h1 {
   .note p {
     font-size: 2rem;
     font-weight: 100;
-    line-height: 2rem;
     color: #ffffffdd;
     padding-top: 2rem;
   }
@@ -506,12 +504,6 @@ h1 {
     padding-bottom: 3rem;
   }
 
-  h2 {
-    font-size: 2rem;
-    font-weight: bold;
-    line-height: 2rem;
-    color: #211e4f;
-  }
   .edit h2,
   .media h2,
   .photo h2 {
@@ -525,7 +517,6 @@ h1 {
   .photo p {
     font-size: 1.5rem;
     font-weight: 100;
-    line-height: 3rem;
     color: #151435;
     padding-top: 1rem;
   }
@@ -552,7 +543,7 @@ h1 {
     max-width: 350px;
   }
   .show h2 {
-    padding-top: 1rem;
+    padding: 2rem;
   }
   .pad {
     display: flex;
@@ -565,23 +556,127 @@ h1 {
   .basics,
   .effects {
     width: 400px;
-  }
-  .free {
-    margin-left: 30rem;
+    margin-bottom: 2rem;
   }
 }
 
-@media (max-width: 475px) {
+@media (max-width: 425px) {
   .sign,
   .try {
     display: none;
   }
   .caption,
   .mid,
-  .player,
+  .mid-side,
   .device,
   .select {
     display: flex;
     flex-direction: column;
+  }
+
+  .links {
+    display: none;
+  }
+
+  .burger {
+    display: block;
+    font-size: 2.5rem;
+  }
+
+  .note {
+    padding-top: 5rem;
+    padding-left: 1rem;
+  }
+  .note h2 {
+    font-size: 3rem;
+    font-weight: 500;
+    line-height: 3rem;
+    color: #fff;
+  }
+  .note p {
+    font-size: 1.5rem;
+    font-weight: 100;
+    color: #ffffffdd;
+    padding-top: 2rem;
+  }
+  .youtube img,
+  .pic img,
+  .pic-1 img,
+  .pic-2 img {
+    max-width: 300px;
+  }
+
+  .edit h2,
+  .media h2,
+  .photo h2 {
+    font-size: 3rem;
+    font-weight: bold;
+    line-height: 4rem;
+    padding-top: 2rem;
+    color: #211e4f;
+  }
+  .edit p,
+  .media p,
+  .photo p {
+    font-size: 1.5rem;
+    font-weight: 100;
+    color: #151435;
+    padding-top: 2rem;
+  }
+  .device,
+  .select {
+    display: flex;
+    /*flex-direction: column;
+    justify-content: center;
+    align-items: center;*/
+    padding-top: 5rem;
+  }
+
+  .point h2 {
+    font-size: 3rem;
+    font-weight: bold;
+    line-height: 4rem;
+    color: #211e4f;
+  }
+
+  .point li {
+    padding: 1rem;
+    font-size: 2rem;
+    color: #151435;
+  }
+
+  .pic-3 img {
+    max-width: 350px;
+  }
+  .show h2 {
+    padding: 2rem;
+  }
+
+  .upload,
+  .basics,
+  .effects {
+    width: 300px;
+    margin-bottom: 2rem;
+  }
+  .end h2 {
+    font-size: 2rem;
+    font-weight: bold;
+    line-height: 4rem;
+  }
+  #english {
+    padding: 1rem 1.5rem;
+    font-size: 1.7rem;
+    color: #211e4f;
+    border: 1px solid #211e4f;
+    background-color: transparent;
+    border-radius: 1rem;
+    margin-top: 5rem;
+    margin-bottom: 5rem;
+  }
+  .mid-footer {
+    display: flex;
+    flex-direction: column;
+    padding-left: 4rem;
+    padding-top: 2rem;
   }
 }
